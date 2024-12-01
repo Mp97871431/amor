@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raquel</title>
+    <style>
+        body{
+            background-color: darkgray;
+        }
+
+        header > h1{
+            text-align: center;
+        }
+
+        section{
+            width: 350px;
+            height: 230px;
+            margin: auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.548);
+        }
+
+        p{
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1.3em;
+        }
+
+        section > p{
+            padding: 10px;
+            font-size: 1.1em;
+
+        }
+    </style>
+</head>
+<body class="j">
+    <header>
+        <h1>Faça o teste</h1>
+    </header>
+    <section>
+        <p>coloque a nota de 0 á 10 do quanto gostou :</p><br>
+        <input type="number" name="n1" id="n1">
+        <input type="button" value="verificar" onclick="verificar()">
+        <div id="res">
+
+        </div>
+
+    </section>
+
+    <script>
+        function verificar(){
+            var nu = window.document.getElementById('n1')
+            var res = window.document.getElementById('res')
+            var numero = Number(nu.value)
+            if(numero > 7){
+                res.innerHTML = `<p> Olá, sua nota foi ${numero}, ja que gostou agora me deve meu prato preferido que é batata frita, cocacola e sorvete de sopremessa. Até a proxima</p>`
+                document.body.style.backgroundColor = "#15cf15"
+            }else{
+                res.innerHTML +=`<p> Que pena que não gostou, sua nota foi de ${numero}, da proxima vez me dedicarei mais`
+                document.body.style.backgroundColor = "#e03737"
+            }
+        }
+    </script>
+
+    <p><a href="index.html">voltar</a></p>
+    
+</body>
+</html>
